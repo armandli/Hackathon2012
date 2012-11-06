@@ -5,15 +5,23 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>Connecttomama</servlet-name>
-		<url-pattern>/connecttomamahey</url-pattern>
+		<url-pattern>/connecttomama</url-pattern>
 	</servlet-mapping>
 	<servlet>
-	    <servlet-name>PostProfile</servlet-name>
-	    <servlet-class>com.mamaconnect.PostProfileServlet</servlet-class>
+		<servlet-name>PostProfile</servlet-name>
+		<servlet-class>com.mamaconnect.PostProfileServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
-	    <servlet-name>PostProfile</servlet-name>
-	    <url-pattern>/postprofile</url-pattern>
+		<servlet-name>PostProfile</servlet-name>
+		<url-pattern>/postprofile</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>PostStory</servlet-name>
+		<servlet-class>com.mamaconnect.PostStoryUpdateServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>PostStory</servlet-name>
+		<url-pattern>/postprofile</url-pattern>
 	</servlet-mapping>
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
