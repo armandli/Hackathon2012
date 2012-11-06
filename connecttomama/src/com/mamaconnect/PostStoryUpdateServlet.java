@@ -10,20 +10,15 @@ import com.google.appengine.api.datastore.Entity;
 import com.google.appengine.api.datastore.Key;
 import com.google.appengine.api.datastore.KeyFactory;
 
-
-@SuppressWarnings("serial")
-public class PostProfileServlet extends HttpServlet {
+public class PostStoryUpdateServlet extends HttpServlet {
 	public void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+		String updateContent = req.getParameter("content");
 		String mamaName = req.getParameter("name");
-		String mamaStory = req.getParameter("story");
-		String mamaPic = req.getParameter("profilepic");
 		
-		Entity profileInfo = new Entity(mamaName);
-		profileInfo.setProperty("mamaName", mamaName);
-		profileInfo.setProperty("mamaStory", mamaStory);
-		profileInfo.setProperty("profilepic", mamaPic);
+		Entity updateEntity = new Entity("", mamaName);
+		updateEntity.setProperty("content", updateContent);
 		
 		DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
-		datastore.put(profileInfo);
+		datastore.put(updateEntity);
 	}
 }
