@@ -5,7 +5,7 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>Connecttomama</servlet-name>
-		<url-pattern>/connecttomama</url-pattern>
+		<url-pattern>/connecttomamahey</url-pattern>
 	</servlet-mapping>
 	<servlet>
 	    <servlet-name>PostProfile</servlet-name>
